@@ -12,7 +12,7 @@ A React starter template for building [Kontent.ai Custom Apps](https://kontent.a
 
 ```bash
 # Use this template or clone
-git clone https://github.com/kontent-ai/custom-app-starter-react.git
+git clone https://github.com/mberry1989/custom-app-starter-react.git
 cd custom-app-starter-react
 
 # Install dependencies
