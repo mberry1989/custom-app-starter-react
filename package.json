@@ -1,0 +1,54 @@
+{
+  "name": "kontent-ai-custom-app-starter-react",
+  "version": "1.0.0",
+  "description": "Starter template for Kontent.ai custom apps built with React and TypeScript",
+  "type": "module",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "certs": "mkcert localhost",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "kontent-ai",
+    "custom-app",
+    "react",
+    "typescript",
+    "starter",
+    "template",
+    "cms"
+  ],
+  "author": "Kontent.ai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kontent-ai/custom-app-starter-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kontent-ai/custom-app-starter-react/issues"
+  },
+  "homepage": "https://github.com/kontent-ai/custom-app-starter-react#readme",
+  "dependencies": {
+    "@kontent-ai/custom-app-sdk": "^1.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.14.0",
+    "@typescript-eslint/parser": "^6.14.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.55.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
+  }
+}
