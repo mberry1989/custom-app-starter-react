@@ -5,17 +5,17 @@
 /**
  * User role information from Kontent.ai
  */
-export interface UserRole {
+export type UserRole = {
   /** Role ID */
   readonly id: string;
   /** Role codename - applicable only for the Project manager role */
   readonly codename?: string | null;
-}
+};
 
 /**
  * Context data provided by Kontent.ai application
  */
-export interface AppContext {
+export type AppContext = {
   /** Environment ID */
   environmentId: string;
   /** Current user's ID */
@@ -24,22 +24,22 @@ export interface AppContext {
   userEmail: string;
   /** Array of user roles in the environment */
   userRoles: readonly UserRole[];
-}
+};
 
 /**
- * Custom app configuration interface
+ * Custom app configuration type
  *
  * Contains configuration values passed from Kontent.ai when your app is initialized.
  * The structure depends on what you configure in the Kontent.ai interface.
  */
-export interface AppConfig {
+export type AppConfig = {
   [key: string]: unknown;
-}
+};
 
 /**
- * Custom app state interface
+ * Custom app state type
  */
-export interface CustomAppState {
+export type CustomAppState = {
   /** Whether the app is loading */
   isLoading: boolean;
   /** Error state */
@@ -48,4 +48,4 @@ export interface CustomAppState {
   config: AppConfig | null;
   /** Kontent.ai context */
   context: AppContext | null;
-}
+};
