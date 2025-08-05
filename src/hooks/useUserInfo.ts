@@ -2,8 +2,8 @@
  * React hook for accessing user information
  */
 
-import { useContext } from 'react';
-import { CustomAppContext } from '../components/CustomAppProvider';
+import { useContext } from "react";
+import { CustomAppContext } from "../components/CustomAppProvider";
 
 /**
  * Hook to get current user information
@@ -11,15 +11,15 @@ import { CustomAppContext } from '../components/CustomAppProvider';
  */
 export function useUserInfo(): { userId: string; userEmail: string } | null {
   const context = useContext(CustomAppContext);
-  
+
   if (!context) {
-    throw new Error('useUserInfo must be used within a CustomAppProvider');
+    throw new Error("useUserInfo must be used within a CustomAppProvider");
   }
-  
+
   if (!context.context) {
     return null;
   }
-  
+
   return {
     userId: context.context.userId,
     userEmail: context.context.userEmail,

@@ -28,7 +28,7 @@ export interface AppContext {
 
 /**
  * Custom app configuration interface
- * 
+ *
  * Contains configuration values passed from Kontent.ai when your app is initialized.
  * The structure depends on what you configure in the Kontent.ai interface.
  */
@@ -49,6 +49,3 @@ export interface CustomAppState {
   /** Kontent.ai context */
   context: AppContext | null;
 }
-
-
-

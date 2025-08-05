@@ -113,6 +113,21 @@ Your app will be available at `https://localhost:3000`
 
 Choose the approach that works best for your development workflow.
 
+## ✨ Code Quality
+
+This project uses the official [Kontent.ai Biome configuration](https://github.com/kontent-ai/biome-config) for consistent formatting and linting:
+
+```bash
+# Check code quality
+npm run lint
+
+# Auto-fix issues  
+npm run lint:fix
+
+# Format code
+npm run format
+```
+
 ## 📁 Project Structure
 
 ```

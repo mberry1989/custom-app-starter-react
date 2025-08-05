@@ -2,9 +2,9 @@
  * React hook for accessing custom app configuration
  */
 
-import { useContext } from 'react';
-import { CustomAppContext } from '../components/CustomAppProvider';
-import { AppConfig } from '../types';
+import { useContext } from "react";
+import { CustomAppContext } from "../components/CustomAppProvider";
+import type { AppConfig } from "../types";
 
 /**
  * Hook to access the custom app configuration
@@ -12,11 +12,10 @@ import { AppConfig } from '../types';
  */
 export function useConfig(): AppConfig | null {
   const context = useContext(CustomAppContext);
-  
+
   if (!context) {
-    throw new Error('useConfig must be used within a CustomAppProvider');
+    throw new Error("useConfig must be used within a CustomAppProvider");
   }
-  
+
   return context.config;
 }
-

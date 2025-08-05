@@ -2,11 +2,11 @@
  * Root App component with error boundary and context providers
  */
 
-import { useContext } from 'react';
-import { CustomAppProvider, CustomAppContext } from './components/CustomAppProvider';
-import { IntegrationApp } from './IntegrationApp';
-import { LoadingSpinner } from './components/LoadingSpinner';
-import { ErrorDisplay } from './components/ErrorDisplay';
+import { useContext } from "react";
+import { CustomAppContext, CustomAppProvider } from "./components/CustomAppProvider";
+import { ErrorDisplay } from "./components/ErrorDisplay";
+import { LoadingSpinner } from "./components/LoadingSpinner";
+import { IntegrationApp } from "./IntegrationApp";
 
 /**
  * Inner app component that handles different states
@@ -23,17 +23,15 @@ function AppContent() {
   }
 
   if (appState.error) {
-    const isIframeError = appState.error.includes('must be hosted within the Kontent.ai CMS interface');
-    const title = isIframeError ? 'App Not Running in Kontent.ai' : 'Failed to Initialize Custom App';
-    const onRetry = isIframeError ? undefined : () => window.location.reload();
-    
-    return (
-      <ErrorDisplay 
-        error={appState.error} 
-        title={title}
-        onRetry={onRetry}
-      />
+    const isIframeError = appState.error.includes(
+      "must be hosted within the Kontent.ai CMS interface",
     );
+    const title = isIframeError
+      ? "App Not Running in Kontent.ai"
+      : "Failed to Initialize Custom App";
+    const onRetry = isIframeError ? undefined : () => window.location.reload();
+
+    return <ErrorDisplay error={appState.error} title={title} onRetry={onRetry} />;
   }
 
   return <IntegrationApp />;

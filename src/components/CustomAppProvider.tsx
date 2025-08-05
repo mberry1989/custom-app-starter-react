@@ -2,9 +2,9 @@
  * React context provider for Custom App SDK
  */
 
-import { createContext, ReactNode } from 'react';
-import { CustomAppState } from '../types';
-import { useCustomAppContext } from '../hooks/useCustomAppContext';
+import { createContext, type ReactNode } from "react";
+import { useCustomAppContext } from "../hooks/useCustomAppContext";
+import type { CustomAppState } from "../types";
 
 /**
  * Context for sharing custom app state throughout the component tree
@@ -25,10 +25,5 @@ interface CustomAppProviderProps {
 export function CustomAppProvider({ children }: CustomAppProviderProps) {
   const appState = useCustomAppContext();
 
-  return (
-    <CustomAppContext.Provider value={appState}>
-      {children}
-    </CustomAppContext.Provider>
-  );
+  return <CustomAppContext.Provider value={appState}>{children}</CustomAppContext.Provider>;
 }
-
