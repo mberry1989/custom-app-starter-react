@@ -84,34 +84,27 @@ function MyComponent() {
 
 ## 🔧 Local Development
 
-Kontent.ai requires HTTPS for custom apps. Here are your options:
+Kontent.ai requires HTTPS for custom apps. This project automatically generates self-signed certificates using Vite's basic SSL plugin.
 
-### Option 1: mkcert (Recommended)
+### Automatic HTTPS (Default)
 
 ```bash
-# Install mkcert (one-time setup)
-# Windows: choco install mkcert
-# macOS: brew install mkcert  
-# Linux: see https://github.com/FiloSottile/mkcert#installation
-
-# Generate local certificates
-mkcert -install
-npm run certs
-
-# Start with HTTPS
+# Start development with automatic HTTPS
 npm run dev
 ```
 
-Your app will be available at `https://localhost:3000`
+Your app will be available at `https://localhost:3000` with automatically generated certificates.
 
-### Option 2: Other HTTPS Solutions
+> **Note:** Your browser will show a security warning for self-signed certificates. Click "Advanced" → "Proceed to localhost" to continue.
+
+### Alternative HTTPS Solutions
+
+If you prefer other solutions:
 
 - **Cloudflare Tunnel**: `cloudflared tunnel --url http://localhost:3000`
 - **ngrok**: `ngrok http 3000` (use the HTTPS URL)
 - **Reverse proxy**: nginx, Caddy, or similar with SSL termination
 - **IDE extensions**: Some editors provide HTTPS dev servers
-
-Choose the approach that works best for your development workflow.
 
 ## ✨ Code Quality
 
