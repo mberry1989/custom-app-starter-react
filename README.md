@@ -140,15 +140,9 @@ src/
 
 ## 🔗 Learn More
 
-- [Custom Apps Documentation](https://kontent.ai/learn/docs/developing-apps/custom-apps)
+- [Custom Apps Documentation](https://kontent.ai/learn/docs/custom-apps)
 - [Custom App SDK](https://github.com/kontent-ai/custom-app-sdk-js)
-- [Kontent.ai Developer Hub](https://kontent.ai/learn/docs)
-
-## 🆘 Support
-
-- [Discord Community](https://discord.gg/SKCxwPtevJ)
-- [GitHub Issues](https://github.com/kontent-ai/custom-app-starter-react/issues)
-- [Developer Docs](https://kontent.ai/learn/docs)
+- [Kontent.ai Develop Section](https://kontent.ai/learn/develop/overview)
 
 ---
 
